@@ -1,7 +1,6 @@
 # Omniverse
 **/*.dmp
 **/.thumbs
-**/datasets/*
 datasets/rosbag/*
 # Python
 .DS_Store
