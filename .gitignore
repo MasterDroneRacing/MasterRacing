@@ -2,7 +2,6 @@
 **/*.dmp
 **/.thumbs
 **/datasets/*
-datasets/articulations/*
 datasets/rosbag/*
 # Python
 .DS_Store
