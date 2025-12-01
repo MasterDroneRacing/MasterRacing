@@ -1,0 +1,36 @@
+[package]
+
+# Semantic Versioning is used: https://semver.org/
+version = "1.0.0"
+
+# Description
+category = "isaaclab + difflab"
+readme  = "README.md"
+
+title = "DiffLab:an IssacLab extension"
+author = "DiffLab and Isaac Lab Project Developers"
+maintainer = "DiffLab and Isaac Lab Project Developers"
+description="Differential Extension for Isaac Lab"
+repository = "https://github.com/yufengsjtu/DiffLab"
+keywords = ["extension", "difflab", "isaaclab"]
+
+[dependencies]
+"isaacsim.core" = {}
+"isaacsim.ml_archive" = {}
+"omni.replicator.core" = {}
+"isaaclab" = {}
+"isaaclab_assets" = {}
+"isaaclab_tasks" = {}
+# NOTE: Add additional dependencies here
+
+[[python.module]]
+name = "diff.lab_assets"
+
+[isaaclab_settings]
+# TODO: Uncomment and list any apt dependencies here.
+#       If none, leave it commented out.
+# apt_deps = ["example_package"]
+# TODO: Uncomment and provide path to a ros_ws
+#       with rosdeps to be installed. If none,
+#       leave it commented out.
+# ros_ws = "path/from/extension_root/to/ros_ws"

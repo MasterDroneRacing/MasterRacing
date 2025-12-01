@@ -1,0 +1,13 @@
+grad_decay_factor: 0.92  # gradient decay factor when backpropagating through time
+
+# [NOTE] All randomness values are applied in a uniform distribution
+drag_1_coeffs: [0.18, 0.18, 0.18]  # air drag coefficients for x, y, z
+drag_1_randomness: 0.1  # air drag coefficients randomness
+
+drag_2_coeffs: [0.01, 0.01, 0.01]  # horizontal force drag coefficients for x, y (blade flapping) (the z component should be zero !!!)
+drag_2_randomness: 0.005  # horizontal force drag coefficients randomness
+
+z_drag_coeff: 4.0
+z_drag_randomness: 0.4  # vertical force drag coefficient randomness
+
+g: 9.81

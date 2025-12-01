@@ -1,0 +1,123 @@
+[build-system]
+requires = ["setuptools", "toml"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "difflab"
+version= "1.0.0"
+keywords = ["differential-quadrotors", "reinforcement-learning", "isaac", "rl-pytorch"]
+maintainers = [
+    { name="Feng Yu", email="yu-feng@sjtu.edu.cn" },
+    { name="Yang Su", email="nbys000@qq.com"},
+    { name="Jiahao Cui", email="3246269778@qq.com"},
+]
+authors = [
+    { name="Feng Yu", email="yu-feng@sjtu.edu.cn" },
+    { name="Yang Su", email="nbys000@qq.com"},
+    { name="Jiahao Cui", email="3246269778@qq.com"},
+]
+
+description = "A fast and simple differentiable quadrotor simulator with differential algorithms"
+readme = { file = "README.md", content-type = "text/markdown"}
+license = { text = "BSD-3-Clause" }
+
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "torch>=2.2.0",
+    "torchvision>=0.18.0",
+    "numpy>=1.24.0",
+    "omni-isaac-lab>=0.27.15",
+    "omni-isaac-lab_assets>=0.1.4",
+    "omni-isaac-lab_tasks>=0.10.13",
+    "GitPython",
+    "onnx",
+]
+
+[project.urls]
+Homepage = "https://github.com/yufengsjtu/DiffLab"
+Issues = "https://github.com/yufengsjtu/DiffLab/issues"
+
+[tool.isort]
+
+atomic = true
+profile = "black"
+line_length = 120
+py_version = 310
+skip_glob = ["docs/*", "logs/*"]
+group_by_package = true
+
+sections = [
+    "FUTURE",
+    "STDLIB",
+    "THIRDPARTY",
+    "ISAACLABPARTY",
+    "FIRSTPARTY",
+    "LOCALFOLDER",
+]
+extra_standard_library = [
+    "numpy",
+    "h5py",
+    "open3d",
+    "torch",
+    "tensordict",
+    "bpy",
+    "matplotlib",
+    "gymnasium",
+    "gym",
+    "scipy",
+    "hid",
+    "yaml",
+    "prettytable",
+    "toml",
+    "trimesh",
+    "tqdm",
+    "psutil",
+]
+known_thirdparty = [
+    "omni.isaac.core",
+    "omni.replicator.isaac",
+    "omni.replicator.core",
+    "pxr",
+    "omni.kit.*",
+    "warp",
+    "carb",
+    "Semantics",
+]
+known_isaaclabparty = [
+    "omni.isaac.lab",
+    "omni.isaac.lab_tasks",
+    "omni.isaac.lab_assets"
+]
+
+# Modify the following to include the package names of your first-party code
+known_firstparty = "DiffLab"
+known_local_folder = "config"
+
+[tool.pyright]
+
+exclude = [
+    "**/__pycache__",
+    "**/docs",
+    "**/logs",
+    ".git",
+    ".vscode",
+]
+
+typeCheckingMode = "basic"
+pythonVersion = "3.10"
+pythonPlatform = "Linux"
+enableTypeIgnoreComments = true
+
+# This is required as the CI pre-commit does not download the module (i.e. numpy, torch, prettytable)
+# Therefore, we have to ignore missing imports
+reportMissingImports = "none"
+# This is required to ignore for type checks of modules with stubs missing.
+reportMissingModuleSource = "none" # -> most common: prettytable in mdp managers
+
+reportGeneralTypeIssues = "none"       # -> raises 218 errors (usage of literal MISSING in dataclasses)
+reportOptionalMemberAccess = "warning" # -> raises 8 errors
+reportPrivateUsage = "warning"
