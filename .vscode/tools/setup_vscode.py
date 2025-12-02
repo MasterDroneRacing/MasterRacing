@@ -191,6 +191,7 @@ def main():
     # read the Isaac Lab template settings file
     with open(isaaclab_vscode_template_filename) as f:
         isaaclab_template_settings = f.read()
+        
 
     # overwrite the python.analysis.extraPaths in the Isaac Lab settings file with the path names
     isaaclab_settings = overwrite_python_analysis_extra_paths(isaaclab_template_settings)
