@@ -17,22 +17,22 @@ We evaluate our framework through extensive simulation and ablation studies, and
 ```
 ## Installation
 
-- install IsaacSim and IsaacLab [installation guide](https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/index.html#local-installation), we recommend install them using anaconda.
+- Install [IsaacSim and IsaacLab](https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/index.html#local-installation), we recommend using Anaconda to install them.
 
-- clone our repository.
+- Clone our repository.
 
 ```bash
 git clone https://github.com/MasterDroneRacing/MasterRacing.git
 ```
 
-- install our repository.
+- Install our repository.
 
 ```bash
 cd path_to_MasterRacing
-conda activate virtual environment(contain isaaclab repo)
+conda activate virtual_environment (contain isaaclab repo)
 bash ./install.sh
 ```
-- setup vscode.
+- Setup vscode.
 ```bash
 python .vscode/tools/setup_vscode.py --isaac_path path_to_isaaclab_repo
 ```
@@ -43,7 +43,7 @@ python .vscode/tools/setup_vscode.py --isaac_path path_to_isaaclab_repo
 python standalone/rsl_rl/train.py --task=Template-Isaac-Velocity-Rough-Anymal-D-v0
 ```
 
-- Training and evluation for Racing
+- Training and evluation.
 1. Click 'run and debug' button in vscode.
 2. Drop down menu, select stage 0, and then click on start debugging.
 3. See corrsponding options in [launch.json](https://github.com/MasterDroneRacing/MasterRacing/tree/main/.vscode/launch.json).
