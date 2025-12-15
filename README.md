@@ -84,7 +84,7 @@ Some examples of packages that can likely be excluded are:
 ## Citation
 When referencing our MasterRacing in your research, please cite the following paper:
 ```
-@ARTICLE{kulkarni2025@aerialgym,
+@ARTICLE{yu2025mastering,
   author={Feng Yu, Yu Hu, Yang Su, Yang Deng, Linzuo Zhang, and Danping Zou},
   journal={IEEE Robotics and Automation Letters}, 
   title={Mastering Diverse, Unknown, and Cluttered Tracks for Robust
